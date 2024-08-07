@@ -6,20 +6,25 @@ from Utils.BaseClass import BaseClass
 
 sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
 from POM.MainMenuPage import MainMenuPage
-from POM.ShoppingCartPage import ShoppingCartPage
+from POM.AlertPage import AlertPage
 
 
-class TestLoginShopEcommerce(BaseClass):
+class TestAlertExample(BaseClass):
 
-    def test_LoginShopEcommerce(self):
+    def test_AlertExample(self):
         log = self.get_Logger()
         log.info("Se está por loguear en la página")
         driver = self.driver
         mmp = MainMenuPage(driver)
-        mmp.selectShopEcommerceLink()
-        email = "admin@admin.com"
-        password = "admin123"
-        mmp.doLogin(email, password)
-        scp = ShoppingCartPage(driver)
-        assert scp.verifyBtnCheckoutIsVisible()
+        self.driver.execute_script("window.scrollTo(0, 400)")
+        time.sleep(1)
+        mmp.selectAlertsLink()
+        ap = AlertPage(driver)
+        ap.handleAlertPopUp()
         time.sleep(2)
+        ap.handleConfirmPopUp()
+        time.sleep(2)
+
+
+
+

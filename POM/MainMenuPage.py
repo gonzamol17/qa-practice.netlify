@@ -15,6 +15,23 @@ class MainMenuPageLocators:
     formsLoginLink = (By.ID, "login")
     formsRegisterLink = (By.ID, "register")
     formsRecoverLink = (By.ID, "recover-password")
+    buttonsLink = (By.XPATH, "//a[contains(text(),'Buttons')]")
+    buttonsCheckboxesLink = (By.ID, "checkboxes")
+    buttonsRadioButtonLink = (By.ID, "radio-buttons")
+    newTabWindowsLink = (By.XPATH, "//a[contains(text(),'New Tab / Window')]")
+    newBrowserTabLink = (By.ID, "browser-tab")
+    newBrowserWindowLink = (By.ID, "browser-window")
+    btnActionLink = (By.ID, "actions")
+    doubleClickLink = (By.ID, "double-click")
+    scrollingLink = (By.ID, "scrolling")
+    mouseOverLink = (By.ID, "mouse-hover")
+    showHideLink = (By.ID, "show-hide-elements")
+    tablesLink = (By.XPATH, "//a[contains(text(),'Tables')]")
+    staticTablesLink = (By.XPATH, "//a[contains(text(),'Static Table')]")
+    dinamicTablesLink = (By.XPATH, "//a[contains(text(),'Dynamic Table')]")
+    dropDownLink = (By.XPATH, "//a[contains(text(),'Dropdown')]")
+    iFrameLink = (By.XPATH, "//a[contains(text(),'Iframes')]")
+    alertsLink = (By.XPATH, "//a[contains(text(),'Alerts')]")
 
 
 class MainMenuPage:
@@ -45,6 +62,47 @@ class MainMenuPage:
     def selectFormsRecoverPasswordLink(self):
         self.driver.find_element(*MainMenuPageLocators.formsRecoverLink).click()
 
+    def selectButtonsLink(self):
+        self.driver.find_element(*MainMenuPageLocators.buttonsLink).click()
 
+    def selectButtonsCheckboxesLink(self):
+        self.driver.find_element(*MainMenuPageLocators.buttonsCheckboxesLink).click()
 
+    def selectButtonsRadioButtonsLink(self):
+        self.driver.find_element(*MainMenuPageLocators.buttonsRadioButtonLink).click()
+
+    def selectNewTabWindowLink(self):
+        self.driver.find_element(*MainMenuPageLocators.newTabWindowsLink).click()
+
+    def selectNewBrowserTabLink(self):
+        self.driver.find_element(*MainMenuPageLocators.newBrowserTabLink).click()
+
+    def selectNewBrowserWindowsLink(self):
+        self.driver.find_element(*MainMenuPageLocators.newBrowserWindowLink).click()
+
+    def selectBtnActionLink(self):
+        self.driver.find_element(*MainMenuPageLocators.btnActionLink).click()
+
+    def selectBtnActionDoubleClickLink(self):
+        self.driver.find_element(*MainMenuPageLocators.doubleClickLink).click()
+
+    def selectScrollingLink(self):
+        self.driver.find_element(*MainMenuPageLocators.scrollingLink).click()
+    def selectMouseOverLink(self):
+        self.driver.find_element(*MainMenuPageLocators.mouseOverLink).click()
+    def selectShowHideLink(self):
+        self.driver.find_element(*MainMenuPageLocators.showHideLink).click()
+    def selectTablesLink(self):
+        self.driver.find_element(*MainMenuPageLocators.tablesLink).click()
+    def selectStaticTablesLink(self):
+        self.driver.find_element(*MainMenuPageLocators.staticTablesLink).click()
+    def selectDinamicTablesLink(self):
+        self.driver.find_element(*MainMenuPageLocators.dinamicTablesLink).click()
+    def selectDropDownLink(self):
+        self.driver.find_element(*MainMenuPageLocators.dropDownLink).click()
+    def selectIframeLink(self):
+        self.driver.find_element(*MainMenuPageLocators.iFrameLink).click()
+
+    def selectAlertsLink(self):
+        self.driver.find_element(*MainMenuPageLocators.alertsLink).click()
 

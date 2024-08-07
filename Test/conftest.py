@@ -1,31 +1,35 @@
-import time
 import warnings
-import json
 import pytest
 from Utils import utils as utils
-from selenium.common.exceptions import NoSuchElementException
+#from Utils import utils
 from selenium.webdriver.chrome.service import Service
 driver = None
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
 
-@pytest.fixture()
+
+@pytest.fixture(scope="class")
 def test_setup(request):
     global driver
     from selenium import webdriver
     browser = request.config.getoption("--browser")
     if browser == 'chrome':
-        service_obj = Service("..\\Drivers\\chromedriver.exe")
+        service_obj = Service("../Drivers/chromedriver.exe")
         driver = webdriver.Chrome(service=service_obj)
     elif browser == 'firefox':
-        service_obj = Service("..\\Drivers\\geckodriver.exe")
+        service_obj = Service("../Drivers/geckodriver.exe")
         driver = webdriver.Firefox(service=service_obj)
     warnings.simplefilter('ignore', ResourceWarning)
+    #driver.implicitly_wait(10)
+    #driver.maximize_window()
+    #driver.get("https://qa-practice.netlify.app/")
+    driver.get(utils.URL)
     driver.implicitly_wait(10)
     driver.maximize_window()
+    #driver.get(utils.URL)
     request.cls.driver = driver
-    driver.get(utils.URL)
+    #driver.get(utils.URL)
     yield
     driver.close()
     driver.quit()
