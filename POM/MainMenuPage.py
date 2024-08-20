@@ -32,6 +32,12 @@ class MainMenuPageLocators:
     dropDownLink = (By.XPATH, "//a[contains(text(),'Dropdown')]")
     iFrameLink = (By.XPATH, "//a[contains(text(),'Iframes')]")
     alertsLink = (By.XPATH, "//a[contains(text(),'Alerts')]")
+    fileUploadLink = (By.XPATH, "//a[contains(text(),'File Upload')]")
+    datePickersLink = (By.XPATH, "//a[contains(text(),'Date Pickers')]")
+    loaderLink = (By.XPATH, "//a[contains(text(),'Loader')]")
+
+
+
 
 
 class MainMenuPage:
@@ -105,4 +111,13 @@ class MainMenuPage:
 
     def selectAlertsLink(self):
         self.driver.find_element(*MainMenuPageLocators.alertsLink).click()
+
+    def selectFileUploadLink(self):
+        self.driver.find_element(*MainMenuPageLocators.fileUploadLink).click()
+
+    def selectdatePickersLink(self):
+        self.driver.find_element(*MainMenuPageLocators.datePickersLink).click()
+
+    def selectloaderLink(self):
+        self.driver.find_element(*MainMenuPageLocators.loaderLink).click()
 
