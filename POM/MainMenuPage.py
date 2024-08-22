@@ -35,7 +35,7 @@ class MainMenuPageLocators:
     fileUploadLink = (By.XPATH, "//a[contains(text(),'File Upload')]")
     datePickersLink = (By.XPATH, "//a[contains(text(),'Date Pickers')]")
     loaderLink = (By.XPATH, "//a[contains(text(),'Loader')]")
-
+    paginationLink = (By.XPATH, "//a[contains(text(),'Pagination')]")
 
 
 
@@ -120,4 +120,7 @@ class MainMenuPage:
 
     def selectloaderLink(self):
         self.driver.find_element(*MainMenuPageLocators.loaderLink).click()
+
+    def selectPaginationLink(self):
+        self.driver.find_element(*MainMenuPageLocators.paginationLink).click()
 
