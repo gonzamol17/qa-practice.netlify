@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
 
+
 #ver si en esta clase base esta anotación de pytest.mark va también, porque ya la estamos usando en la clase
 # que contiene el test. Por lo tanto dentro de la clase del Test, lo único que hay que hacer es llamar
 # a esta clase base, para que pueda usar estos métodos heredados

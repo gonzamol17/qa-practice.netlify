@@ -1,17 +1,15 @@
 import time
 import sys
 import os
-
-from Utils.BaseClass import BaseClass
-
-sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
 from POM.MainMenuPage import MainMenuPage
 from POM.AlertPage import AlertPage
+from Utils.BaseClass import BaseClass
+sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
 
 
 class TestAlertExample(BaseClass):
 
-    def test_AlertExample(self):
+      def test_AlertExample(self):
         log = self.get_Logger()
         log.info("Se está por loguear en la página")
         driver = self.driver

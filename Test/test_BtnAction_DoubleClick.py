@@ -4,7 +4,7 @@ import os
 
 from Utils.BaseClass import BaseClass
 
-sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
+#sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
 from POM.MainMenuPage import MainMenuPage
 from POM.DoubleClickPage import DoubleClickPage
 
