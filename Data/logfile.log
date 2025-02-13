@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-05-10 15:51:50,707 :INFO : test_FirstExample :Se llegó a la home page
 2024-05-13 15:54:41,132 :INFO : test_LoginShopEcommerce :Se está por loguear en la página
 2024-05-13 15:55:35,918 :INFO : test_LoginShopEcommerce :Se está por loguear en la página
@@ -611,3 +612,6 @@
 2025-02-13 10:02:12,657 :INFO : test_BtnActionDoubleClick :Se está por loguear en la página
 2025-02-13 13:01:40,437 :INFO : test_AlertExample :Se está por loguear en la página
 2025-02-13 14:10:00,591 :INFO : test_BtnActionDoubleClick :Se está por loguear en la página
+=======
+
+>>>>>>> 62cf0027a87f9eaa961c2125c711e612f53c5170
