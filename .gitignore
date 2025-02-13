@@ -1,4 +1,4 @@
-Test/screenshots/
+Test/screenshots/git
 # Ignorar drivers de Selenium
 Drivers/chromedriver.exe
 Drivers/geckodriver.exe
