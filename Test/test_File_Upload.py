@@ -2,8 +2,6 @@ import time
 import sys
 import os
 
-import softest
-
 from POM.FileUploadPage import FileUploadPage
 from Utils.BaseClass import BaseClass
 

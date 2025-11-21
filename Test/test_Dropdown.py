@@ -1,8 +1,8 @@
 import time
 import sys
 import os
-
-import softest
+import pytest
+import pytest_check as check
 
 from Utils.BaseClass import BaseClass
 
@@ -11,7 +11,7 @@ from POM.MainMenuPage import MainMenuPage
 from POM.DropDownPage import DropDownPage
 
 
-class TestDropDown(BaseClass, softest.TestCase):
+class TestDropDown(BaseClass):
 
     def test_DropDown(self):
         log = self.get_Logger()
@@ -23,11 +23,13 @@ class TestDropDown(BaseClass, softest.TestCase):
         mmp.selectDropDownLink()
         time.sleep(1)
         ddp = DropDownPage(driver)
-        country = "Uruguayy"
+        country = "Uruguay"
         countriesList = ddp.getCountriesListFromDropdown()
         ddp.selectCountryFromSimpleDropdown(countriesList, country)
-        self.assertIn(country, countriesList)
+        #self.assertIn(country, countriesList)
+        check.is_in(country, countriesList)
         time.sleep(1)
+
 
 
 

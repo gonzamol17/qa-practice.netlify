@@ -1,8 +1,8 @@
 import time
 import sys
 import os
-
-import softest
+import pytest
+import pytest_check as check
 
 from Utils.BaseClass import BaseClass
 
@@ -11,7 +11,7 @@ from POM.MainMenuPage import MainMenuPage
 from POM.DropDownPage import DropDownPage
 
 
-class TestDropDownAndSlide(BaseClass, softest.TestCase):
+class TestDropDownAndSlide(BaseClass):
 
     def test_DropDownAndSlide(self):
         log = self.get_Logger()
@@ -30,7 +30,9 @@ class TestDropDownAndSlide(BaseClass, softest.TestCase):
         ddp.selectAParticularLevel(level)
         aux = level.replace(" ", "")
         aux = aux[3:10]
-        assert aux in self.driver.current_url
+        #assert aux in self.driver.current_url
+        # Soft assert
+        check.is_in(aux, driver.current_url)
         time.sleep(2)
 
 
